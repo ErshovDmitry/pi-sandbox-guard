@@ -1,0 +1,28 @@
+{
+  "name": "pi-sandbox-guard",
+  "version": "0.1.0",
+  "description": "Pi extension: warn when a subagent changes files in the working git repo",
+  "license": "MIT",
+  "type": "module",
+  "private": false,
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.5.2",
+    "@types/node": "26.6.6",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}
